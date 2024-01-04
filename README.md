@@ -1,2 +1,2 @@
 
-![21004063](https://github.com/JanithAgni/InventoryManagement-System/assets/144152758/b43287b2-0f53-43ba-a0f2-88e0202ed2c1)
+![21004063](https://github.com/JanithAgni/InventoryManagement-System/assets/144152758/c3d45dd9-af5b-44cc-9d98-581b459d2e28)
