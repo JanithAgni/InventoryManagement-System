@@ -189,6 +189,7 @@ namespace WindowsFormtesting1
             this.btnhome.TabIndex = 27;
             this.btnhome.Text = "Home";
             this.btnhome.UseVisualStyleBackColor = false;
+            this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
             // 
             // btndelete
             // 

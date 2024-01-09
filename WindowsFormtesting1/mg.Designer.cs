@@ -34,6 +34,7 @@ namespace WindowsFormtesting1
             this.txtcusname = new System.Windows.Forms.TextBox();
             this.gvCustomer = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblexite = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace WindowsFormtesting1
             this.btndelete = new System.Windows.Forms.Button();
             this.btnedit = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
-            this.lblexite = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvCustomer)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,18 @@ namespace WindowsFormtesting1
             this.panel1.Size = new System.Drawing.Size(800, 118);
             this.panel1.TabIndex = 10;
             // 
+            // lblexite
+            // 
+            this.lblexite.AutoSize = true;
+            this.lblexite.Font = new System.Drawing.Font("MS Reference Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblexite.ForeColor = System.Drawing.Color.Red;
+            this.lblexite.Location = new System.Drawing.Point(764, 0);
+            this.lblexite.Name = "lblexite";
+            this.lblexite.Size = new System.Drawing.Size(36, 35);
+            this.lblexite.TabIndex = 15;
+            this.lblexite.Text = "X";
+            this.lblexite.Click += new System.EventHandler(this.lblexite_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -137,6 +149,7 @@ namespace WindowsFormtesting1
             this.btnhome.TabIndex = 14;
             this.btnhome.Text = "Home";
             this.btnhome.UseVisualStyleBackColor = false;
+            this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
             // 
             // btndelete
             // 
@@ -169,18 +182,6 @@ namespace WindowsFormtesting1
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = false;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
-            // lblexite
-            // 
-            this.lblexite.AutoSize = true;
-            this.lblexite.Font = new System.Drawing.Font("MS Reference Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblexite.ForeColor = System.Drawing.Color.Red;
-            this.lblexite.Location = new System.Drawing.Point(764, 0);
-            this.lblexite.Name = "lblexite";
-            this.lblexite.Size = new System.Drawing.Size(36, 35);
-            this.lblexite.TabIndex = 15;
-            this.lblexite.Text = "X";
-            this.lblexite.Click += new System.EventHandler(this.lblexite_Click);
             // 
             // mg
             // 

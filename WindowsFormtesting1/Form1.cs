@@ -91,7 +91,7 @@ namespace WindowsFormtesting1
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         MessageBox.Show("Login successful");
-                        Form2 dashboardForm = new Form2();
+                        dashbordform dashboardForm = new dashbordform();
                         dashboardForm.Show();
                         this.Hide();
                     }

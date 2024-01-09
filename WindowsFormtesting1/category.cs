@@ -88,5 +88,12 @@ namespace WindowsFormtesting1
                 population();
             }
         }
+
+        private void btnhome_Click(object sender, EventArgs e)
+        {
+            dashbordform dashboardForm = new dashbordform();
+            dashboardForm.Show();
+            this.Hide();
+        }
     }
 }
