@@ -106,5 +106,31 @@ namespace WindowsFormtesting1
             dashboardForm.Show();
             this.Hide();
         }
+
+        private void gvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtcusid.Text = gvCustomer.SelectedRows[0].Cells[0].Value.ToString();
+            txtcusname.Text = gvCustomer.SelectedRows[0].Cells[1].Value.ToString();
+            txtcusphone.Text = gvCustomer.SelectedRows[0].Cells[2].Value.ToString();
+            
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update customertb set Cid='" + txtcusid.Text + "',Cname='" + txtcusname.Text + "',Ctelephone='" + txtcusphone.Text +  "'where Cid ='" + txtcusid.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("user sucessfully updated");
+                con.Close();
+                population();
+
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

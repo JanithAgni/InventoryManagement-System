@@ -41,6 +41,8 @@ namespace WindowsFormtesting1
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+
+
             populate();
         }
 
@@ -104,12 +106,7 @@ namespace WindowsFormtesting1
 
         private void gvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            txtusername.Text = gvUser.SelectedRows[0].Cells[0].Value.ToString();
-            txtfullname.Text = gvUser.SelectedRows[0].Cells[1].Value.ToString();
-            txtpassword.Text = gvUser.SelectedRows[0].Cells[2].Value.ToString();
-            txttelephone.Text = gvUser.SelectedRows[0].Cells[3].Value.ToString();
-            
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -122,6 +119,37 @@ namespace WindowsFormtesting1
             dashbordform dashboardForm = new dashbordform();
             dashboardForm.Show();
             this.Hide();
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            try {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update UserTb1 set Uname='" + txtusername.Text + "',Ufullname='" + txtfullname.Text + "',Upassword='" + txtpassword.Text + "',Uphone='" + txttelephone.Text + "'where Uphone ='" + txttelephone.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("user sucessfully updated");
+                con.Close();
+                populate();
+            
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void gvUser_SelectionChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void gvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtusername.Text = gvUser.SelectedRows[0].Cells[0].Value.ToString();
+            txtfullname.Text = gvUser.SelectedRows[0].Cells[1].Value.ToString();
+            txtpassword.Text = gvUser.SelectedRows[0].Cells[2].Value.ToString();
+            txttelephone.Text = gvUser.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }

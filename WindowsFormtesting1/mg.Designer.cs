@@ -83,6 +83,7 @@ namespace WindowsFormtesting1
             this.gvCustomer.Name = "gvCustomer";
             this.gvCustomer.Size = new System.Drawing.Size(483, 218);
             this.gvCustomer.TabIndex = 9;
+            this.gvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCustomer_CellClick);
             // 
             // panel1
             // 
@@ -171,6 +172,7 @@ namespace WindowsFormtesting1
             this.btnedit.TabIndex = 12;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = false;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnadd
             // 
@@ -200,6 +202,7 @@ namespace WindowsFormtesting1
             this.Controls.Add(this.txtcusname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mg";
             this.Load += new System.EventHandler(this.mg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvCustomer)).EndInit();

@@ -138,7 +138,7 @@ namespace WindowsFormtesting1
         private void btnadd_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into producttb values('"+txtProductId.Text+"','"+txtProductName.Text+"','"+txtquentity.Text+"','"+txtprice.Text+"','"+txtdescription.Text+"','"+catcombo.SelectedItem.ToString()+"')",con);
+            SqlCommand cmd = new SqlCommand("insert into producttb values('"+txtProductId.Text+"','"+txtProductName.Text+"','"+txtquentity.Text+"','"+txtprice.Text+"','"+txtdescription.Text+"','"+catcombo.Text+"')",con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("succesfully enterd products");
             con.Close();

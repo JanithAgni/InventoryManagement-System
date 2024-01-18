@@ -56,6 +56,7 @@ namespace WindowsFormtesting1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 118);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblexite
             // 
@@ -187,6 +188,7 @@ namespace WindowsFormtesting1
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "category";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "category";
             this.Load += new System.EventHandler(this.category_Load);
             this.panel1.ResumeLayout(false);

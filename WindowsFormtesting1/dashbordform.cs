@@ -46,5 +46,18 @@ namespace WindowsFormtesting1
             dashboardForm.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            manageOrders dashboardForm = new manageOrders();
+            dashboardForm.Show();
+
+            this.Hide();
+        }
+
+        private void lblexite_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

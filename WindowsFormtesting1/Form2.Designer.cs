@@ -149,6 +149,7 @@ namespace WindowsFormtesting1
             this.btnedit.TabIndex = 6;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = false;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btndelete
             // 
@@ -181,7 +182,9 @@ namespace WindowsFormtesting1
             this.gvUser.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.gvUser.Size = new System.Drawing.Size(435, 216);
             this.gvUser.TabIndex = 9;
+            this.gvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvUser_CellClick);
             this.gvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvUser_CellContentClick);
+            this.gvUser.SelectionChanged += new System.EventHandler(this.gvUser_SelectionChanged);
             // 
             // Form2
             // 
@@ -200,6 +203,7 @@ namespace WindowsFormtesting1
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);

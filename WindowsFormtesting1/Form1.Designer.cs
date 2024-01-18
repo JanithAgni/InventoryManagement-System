@@ -55,7 +55,7 @@ namespace WindowsFormtesting1
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(189, 85);
+            this.panel1.Location = new System.Drawing.Point(226, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 298);
             this.panel1.TabIndex = 1;
@@ -63,9 +63,9 @@ namespace WindowsFormtesting1
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(78, 204);
+            this.btnLogin.Location = new System.Drawing.Point(42, 205);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(232, 23);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace WindowsFormtesting1
             // 
             this.button1.Location = new System.Drawing.Point(41, 243);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(233, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "clear";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@ namespace WindowsFormtesting1
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(191, 243);
+            this.checkBox1.Location = new System.Drawing.Point(192, 168);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(101, 17);
             this.checkBox1.TabIndex = 5;
@@ -132,10 +132,12 @@ namespace WindowsFormtesting1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.LightCyan;
+            this.label1.Font = new System.Drawing.Font("Forte", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(116, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 25);
+            this.label1.Size = new System.Drawing.Size(79, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -145,7 +147,7 @@ namespace WindowsFormtesting1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(150, 29);
+            this.label2.Location = new System.Drawing.Point(183, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(416, 31);
             this.label2.TabIndex = 1;
@@ -161,6 +163,7 @@ namespace WindowsFormtesting1
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
