@@ -100,5 +100,30 @@ namespace WindowsFormtesting1
         {
 
         }
+
+        private void gvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCategoryId.Text = gvCategory.SelectedRows[0].Cells[0].Value.ToString();
+            txtCategoryName.Text = gvCategory.SelectedRows[0].Cells[1].Value.ToString();
+           
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update categorytb set catId='" + txtCategoryId.Text + "',catname='" + txtCategoryName.Text +  "'where catId ='" + txtCategoryId.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("user sucessfully updated");
+                con.Close();
+                population();
+
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

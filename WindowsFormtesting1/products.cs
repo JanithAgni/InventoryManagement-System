@@ -191,5 +191,32 @@ namespace WindowsFormtesting1
             dashboardForm.Show();
             this.Hide();
         }
+
+        private void gvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtProductId.Text = gvProduct.SelectedRows[0].Cells[0].Value.ToString();
+            txtProductName.Text = gvProduct.SelectedRows[0].Cells[1].Value.ToString();
+            txtquentity.Text = gvProduct.SelectedRows[0].Cells[2].Value.ToString();
+            txtprice.Text = gvProduct.SelectedRows[0].Cells[3].Value.ToString();
+            txtdescription.Text = gvProduct.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update producttb set prodId='" + txtProductId.Text + "',prodName='" + txtProductName.Text + "',prodQty='" + txtquentity.Text + "',prodPrice='" + txtprice.Text + "',prodDesc='" + txtdescription.Text + "'where prodId ='" + txtProductId.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("user sucessfully updated");
+                con.Close();
+                populate();
+
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

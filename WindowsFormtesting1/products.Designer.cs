@@ -116,6 +116,7 @@ namespace WindowsFormtesting1
             this.gvProduct.Name = "gvProduct";
             this.gvProduct.Size = new System.Drawing.Size(483, 218);
             this.gvProduct.TabIndex = 17;
+            this.gvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProduct_CellClick);
             this.gvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCategory_CellContentClick);
             // 
             // txtProductId
@@ -211,6 +212,7 @@ namespace WindowsFormtesting1
             this.btnedit.TabIndex = 25;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = false;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnadd
             // 

@@ -116,6 +116,7 @@ namespace WindowsFormtesting1
             this.gvCategory.Name = "gvCategory";
             this.gvCategory.Size = new System.Drawing.Size(483, 218);
             this.gvCategory.TabIndex = 14;
+            this.gvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCategory_CellClick);
             this.gvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvCustomer_CellContentClick);
             // 
             // label1
@@ -160,6 +161,7 @@ namespace WindowsFormtesting1
             this.btnedit.TabIndex = 17;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = false;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnadd
             // 
